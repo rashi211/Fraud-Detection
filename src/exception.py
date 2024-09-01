@@ -34,17 +34,3 @@ class CustomException(Exception):
     
     def __str__(self):
         return self.error_message
-
-
-if __name__ == "__main__":
-    try:
-        a = 1 / 0
-    except Exception as error:
-        # Log the error message
-        logging.info("An error occurred: {0} and details: {1}".
-                     format(
-                         str(error),
-                            CustomException(error, sys)
-                            ))
-        # Raise the custom exception with additional details
-        raise CustomException(error, sys)
