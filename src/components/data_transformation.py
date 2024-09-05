@@ -110,9 +110,11 @@ class DataTransformation:
         except Exception as e:
             raise CustomException(e,sys)
 
+'''
 if __name__ == "__main__":
     obj = DataIngestion()
     train_d,test_d = obj.initiate_data_ingestion()
 
     obj1 = DataTransformation()
     obj1.start_data_transformation(train_d,test_d)
+    '''
